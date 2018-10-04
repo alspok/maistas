@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .table{
     width: 50%;
 }
@@ -10,4 +11,18 @@
 
 .tr{
     font-size: 18px;
+=======
+.table{
+    width: 50%;
+}
+
+.th{
+    color: rgb(92, 92, 238);
+    text-align: left;
+    font-size: 20px
+}
+
+.tr{
+    font-size: 18px;
+>>>>>>> 1431887597ee621dcf64a7b8240ac3e881494127
 }
