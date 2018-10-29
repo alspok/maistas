@@ -3,7 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <link rel='stylesheet' href='logreg.css'>
-
+        <?php
+            require_once 'logregmain.php';
+            require_once 'class.logreg.php';
+         ?>
     </head>
     <body>
         <h2 style=' text-align: center; padding: 50px'>Maistas login arba registracija</h2>
@@ -17,7 +20,7 @@
                             <div><b>Slaptažodis:</b><br><input type='text' name='logpassword' value=''></div>
                             <br>
                             <div><input type='submit' name='logsubmit' value="Įvesti"></div>
-                            <?php if(isset($_POST['logsubmit'])) logInput($_POST); ?>
+                            <?php logSubmit($_POST); ?>
                         </form>
                     </div>
             </div>
@@ -34,7 +37,7 @@
                         <div><b>Telefonas:</b><br><input type='text' name='regphone' value=''></div>
                         <br>
                         <div><input type='submit' name='regsubmit' value="Įvesti"></div>
-                        <?php if(isset($_POST['regsubmit'])) regInput($_POST); ?>
+                        <?php regSubmit($_POST); ?>
                     </form>
                 </div>
             </div>
