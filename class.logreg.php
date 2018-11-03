@@ -22,32 +22,6 @@ class MySqlConnection{
     public function tableView($tblName){
 
         $query = 'SELECT * FROM ' . $tblName;
-        return $this->conn->query($tblName);
-    }
-}
-
-    function dbConnection(){
-        
-        $conn = mysqli_connect($this->serverName, $this->userName, $this->userPassword)
-            or die('Could not connect to server.');
-        var_dump($conn);
-
-        return $conn;
-    }
-
-    function dbView(){
-
-    }
-
-    function dbInsert($dbQuery){
-
-    }
-
-    function dbDelete($dbQuery){
-
-    }
-
-    function dbUpdate($dbQuery){
-
+        return $this->conn->query($query);
     }
 }
