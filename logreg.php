@@ -20,7 +20,7 @@
                             <div><b>Slaptažodis:</b><br><input type='text' name='logpassword'></div>
                             <br>
                             <div><input type='submit' name='logsubmit' value="Įvesti"></div>
-                            <?php echo 'in logreg'; var_dump($_POST); if(!empty($_POST['logsubmit'])) logSubmit($_POST); ?>
+                            <?php if(!empty($_POST['logsubmit'])) logSubmit($_POST); ?>
                         </form>
                     </div> 
             </div>
