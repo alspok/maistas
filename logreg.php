@@ -22,7 +22,7 @@
                             <div><input type='submit' name='logsubmit' value="Įvesti"></div>
                             <?php echo 'in logreg'; var_dump($_POST); if(!empty($_POST['logsubmit'])) logSubmit($_POST); ?>
                         </form>
-                    </div>
+                    </div> 
             </div>
             <div class='reg-box'>
                 <div style='text-align: center; padding: 2px'><h3>Registracija</h3></div>
