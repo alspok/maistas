@@ -14,7 +14,7 @@ function logSubmit($logData){
                 break;
             }
         }
-        if(!$boolen) echo "<p style='color: red'>Entries does not mach. Try again,</p>";
+        if(!$boolen) echo "<p style='color: red'>Entries does not mach. Try again or register.</p>";
     }
     else{
         echo "<p style='color: red'>Enter all tags</p>";
@@ -23,8 +23,7 @@ function logSubmit($logData){
 
 function regSubmit($regData){
 
-    if(!empty($regData['regsubmit']) &&
-        !empty($regData['regname']) &&
+    if( !empty($regData['regname']) &&
         !empty($regData['regpassword']) &&
         !empty($regData['regmail']) &&
         !empty($regData['regphone'])){

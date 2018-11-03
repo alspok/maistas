@@ -37,7 +37,7 @@
                         <div><b>Telefonas:</b><br><input type='text' name='regphone' value=''></div>
                         <br>
                         <div><input type='submit' name='regsubmit' value="Įvesti"></div>
-                        <?php regSubmit($_POST); ?>
+                        <?php if(!empty($_POST['regsubmit'])) regSubmit($_POST); ?>
                     </form>
                 </div>
             </div>
