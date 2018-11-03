@@ -3,16 +3,29 @@
 
 class MySqlConnection{
 
-    function constructor($serverName, $userName, $userPassword, $dbName, $tblName){
+    private $hostName;
+    private $userName;
+    private $password;
+    private $dbName;
 
-        $this->serverName = $serverName;
+    function __construct($hostName, $userName, $password, $dbName){
+
+        $this->hostName = $hostName;
         $this->userName = $userName;
-        $this->userPassword = $userPassword;
+        $this->password = $password;
         $this->dbName = $dbName;
-        $this->tblName = $tblName;
-        $this->dbConnection($this->serverName, $this->userName, $this->userPassword);
+
+        $this->conn = new mysqli($this->hostName, $this->userName, $this->password, $this->dbName);
+        var_dump($this->conn);
     }
-    
+
+    public function tableView($tblName){
+
+        $query = 'SELECT * FROM ' . $tblName;
+        return $this->conn->query($tblName);
+    }
+}
+
     function dbConnection(){
         
         $conn = mysqli_connect($this->serverName, $this->userName, $this->userPassword)
