@@ -16,7 +16,6 @@ class MySqlConnection{
         $this->dbName = $dbName;
 
         $this->conn = new mysqli($this->hostName, $this->userName, $this->password, $this->dbName);
-        var_dump($this->conn);
     }
 
     public function tableView($tblName){
