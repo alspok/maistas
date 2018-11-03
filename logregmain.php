@@ -1,5 +1,8 @@
 <?php
 
+require_once 'class.logreg.php';
+echo 'in logregmain';
+
 function logSubmit($logData){
 
     var_dump($logData);

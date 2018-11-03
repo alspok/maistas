@@ -21,7 +21,7 @@ class MySqlConnection{
 
     public function tableView($tblName){
 
-        $query = 'SELECT * FROM ' . $tblName;
-        return $this->conn->query($query);
+        $queryString = 'SELECT * FROM ' . $tblName;
+        return $this->conn->query($queryString);
     }
 }
