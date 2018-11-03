@@ -15,9 +15,9 @@
                 <div style='text-align: center; padding: 2px'><h3>Login</h3></div>
                     <div class='flex'>
                         <form action='' name='logform' method='post'> 
-                            <div><b>Vartotojo vardas:</b><br><input type='text' name='logname' value=''></div>
+                            <div><b>Vartotojo vardas:</b><br><input type='text' name='logname'></div>
                             <br>
-                            <div><b>Slaptažodis:</b><br><input type='text' name='logpassword' value=''></div>
+                            <div><b>Slaptažodis:</b><br><input type='text' name='logpassword'></div>
                             <br>
                             <div><input type='submit' name='logsubmit' value="Įvesti"></div>
                             <?php var_dump($_POST); if(!empty($_POST['logsubmit'])) logSubmit($_POST); ?>
