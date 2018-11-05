@@ -19,16 +19,19 @@ class MySqliConnection{
     }
 
     public function tableView($tblName){
-        $str = 'SELECT * FROM ?';
-        $stmt = $this->conn->prepare($str);
-        var_dump($stmt);
-        $stmt->bind_param('s', $tblName);
-        var_dump($stmt);
-        $query->close();
-        var_dump($stmt);
-        return $stmt;
 
-        // $queryString = 'SELECT * FROM ' . $tblName;
-        // return $this->conn->query($queryString);
+        $queryString = 'SELECT * FROM ' . $tblName;
+        return $this->conn->query($queryString);
+    }
+
+    public function tableInsert($tblName, $regData){
+
+        // $queryString = 'INSET INTO ? (username, password, email, phone) VALUES (?, ?, ?, ?)';
+        // $query = $this->conn->prepare($queryString);
+        // $query->bind_param('sssss', $tblName, $regData['regname'], $regData['regpassword'], $regData['regemail'], $regData['regphone']);
+        // $query->execute();
+        // $query->close();
+        $queryString = "INSER INTO " . $tblName . " (username, password, email, phone) VALUES (" . $regData['regname'] . ", " . $regData['regpassword'] . ", " .  $regData['regmail'] . ", " .  $regData['regphone'] . ")";
+        $this->conn->query($queryString);
     }
 }

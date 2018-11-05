@@ -27,6 +27,8 @@ function regSubmit($regData){
         !empty($regData['regpassword']) &&
         !empty($regData['regmail']) &&
         !empty($regData['regphone'])){
+            $conn = new MySqliConnection('localhost', 'root', '', 'db_maistas');
+            $table = $conn->tableInsert('tbl_logret', $regData);
             echo '<p>OK</p>';
         }
     else{
