@@ -3,7 +3,7 @@
 function logSubmit($logData){
 
     if( !empty($logData['logname']) && !empty($logData['logpassword'])){
-        $conn = new MySqliConnection('localhost', 'root', '', 'db_maistas');
+        $conn = new MySqliConnection('localhost', 'root', '', 'db_alspok');
         $table = $conn->tableView('tbl_logreg');
         $boolen = false;
         while($row = $table->fetch_assoc()){
@@ -27,7 +27,7 @@ function regSubmit($regData){
         !empty($regData['regpassword']) &&
         !empty($regData['regmail']) &&
         !empty($regData['regphone'])){
-            $conn = new MySqliConnection('localhost', 'root', '', 'db_maistas');
+            $conn = new MySqliConnection('localhost', 'root', '', 'db_alspok');
             $table = $conn->tableInsert('tbl_logret', $regData);
             echo '<p>OK</p>';
         }

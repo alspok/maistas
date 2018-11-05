@@ -31,7 +31,8 @@ class MySqliConnection{
         // $query->bind_param('sssss', $tblName, $regData['regname'], $regData['regpassword'], $regData['regemail'], $regData['regphone']);
         // $query->execute();
         // $query->close();
-        $queryString = "INSER INTO " . $tblName . " (username, password, email, phone) VALUES (" . $regData['regname'] . ", " . $regData['regpassword'] . ", " .  $regData['regmail'] . ", " .  $regData['regphone'] . ")";
+        $queryString = "INSER INTO " . $tblName . " (username, password, email, phone) VALUES (" . "\'" . $regData['regname'] . "\', \'" . $regData['regpassword'] . "\', \'" .  $regData['regmail'] . "\', \'" .  $regData['regphone'] . "\')";
+        var_dump($queryString);
         $this->conn->query($queryString);
     }
 }
