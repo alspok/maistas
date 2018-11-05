@@ -3,11 +3,11 @@
 function logSubmit($logData){
 
     if( !empty($logData['logname']) && !empty($logData['logpassword'])){
-        $conn = new MySqlConnection('localhost', 'root', '', 'db_maistas');
+        $conn = new MySqliConnection('localhost', 'root', '', 'db_maistas');
         $table = $conn->tableView('tbl_logreg');
         $boolen = false;
         while($row = $table->fetch_assoc()){
-            // echo '<br>' . $row['id'] . '<br>' . $row['username'] . '<br>' . $row['password'];
+            echo '<br>' . $row['id'] . '<br>' . $row['username'] . '<br>' . $row['password'];
             if(($logData['logname'] == $row['username']) && ($logData['logpassword'] == $row['password'])){
                 echo "<p style='color: green'> Loged in!</p>";
                 $boolen = true;

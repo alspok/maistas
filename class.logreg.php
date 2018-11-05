@@ -1,7 +1,7 @@
 <?php
 /* User registration and login class*/
 
-class MySqlConnection{
+class MySqliConnection{
 
     private $hostName;
     private $userName;
@@ -19,8 +19,16 @@ class MySqlConnection{
     }
 
     public function tableView($tblName){
+        $str = 'SELECT * FROM ?';
+        $stmt = $this->conn->prepare($str);
+        var_dump($stmt);
+        $stmt->bind_param('s', $tblName);
+        var_dump($stmt);
+        $query->close();
+        var_dump($stmt);
+        return $stmt;
 
-        $queryString = 'SELECT * FROM ' . $tblName;
-        return $this->conn->query($queryString);
+        // $queryString = 'SELECT * FROM ' . $tblName;
+        // return $this->conn->query($queryString);
     }
 }
