@@ -3,7 +3,7 @@
 function logSubmit($logData){
 
     if( !empty($logData['logname']) && !empty($logData['logpassword'])){
-        $conn = new MySqliConnection('localhost', 'root', '', 'db_alspok');
+        $conn = new MySqliConnection('localhost', 'root', '', 'db-alspok');
         $table = $conn->tableView('tbl_logreg');
         $boolen = false;
         while($row = $table->fetch_assoc()){
@@ -25,13 +25,14 @@ function regSubmit($regData){
 
     if( !empty($regData['regname']) &&
         !empty($regData['regpassword']) &&
-        !empty($regData['regmail']) &&
+        !empty($regData['regemail']) &&
         !empty($regData['regphone'])){
-            $conn = new MySqliConnection('localhost', 'root', '', 'db_alspok');
-            $table = $conn->tableInsert('tbl_logret', $regData);
-            echo '<p>OK</p>';
+            $conn = new MySqliConnection('localhost', 'root', '', 'db-alspok');
+            if($conn->tableInsert('tbl_logreg', $regData)){;
+            echo '<p>Success!</p>';
         }
-    else{
+        else{
         echo "<p style='color: red'>Enter all tags</p>";
+        }
     }
 }

@@ -32,7 +32,7 @@
                         <br>
                         <div><b>Slaptažodis:</b><br><input type='text' name='regpassword' value=''></div>
                         <br>
-                        <div><b>El. pašto adresas:</b><br><input type='text' name='regmail' value=''></div>
+                        <div><b>El. pašto adresas:</b><br><input type='text' name='regemail' value=''></div>
                         <br>
                         <div><b>Telefonas:</b><br><input type='text' name='regphone' value=''></div>
                         <br>

@@ -14,25 +14,29 @@ class MySqliConnection{
         $this->userName = $userName;
         $this->password = $password;
         $this->dbName = $dbName;
-
         $this->conn = new mysqli($this->hostName, $this->userName, $this->password, $this->dbName);
     }
 
     public function tableView($tblName){
 
         $queryString = 'SELECT * FROM ' . $tblName;
-        return $this->conn->query($queryString);
+        $query = $this->conn->query($queryString);
+        
+        return $query;
     }
 
     public function tableInsert($tblName, $regData){
 
-        // $queryString = 'INSET INTO ? (username, password, email, phone) VALUES (?, ?, ?, ?)';
-        // $query = $this->conn->prepare($queryString);
-        // $query->bind_param('sssss', $tblName, $regData['regname'], $regData['regpassword'], $regData['regemail'], $regData['regphone']);
-        // $query->execute();
-        // $query->close();
-        $queryString = "INSER INTO " . $tblName . " (username, password, email, phone) VALUES (" . "\'" . $regData['regname'] . "\', \'" . $regData['regpassword'] . "\', \'" .  $regData['regmail'] . "\', \'" .  $regData['regphone'] . "\')";
-        var_dump($queryString);
-        $this->conn->query($queryString);
+        $queryString = 'INSERT INTO ' . $tblName . ' (username, password, email, phone) VALUES (?, ?, ?, ?)';
+        $query = $this->conn->prepare($queryString);
+        $query->bind_param('ssss', $regData['regname'], $regData['regpassword'], $regData['regemail'], $regData['regphone']);
+        $query->execute();
+        $query->close();
+
+        return true;
+    }
+
+    public function tableDelete($tblName){
+        
     }
 }
