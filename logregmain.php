@@ -19,7 +19,7 @@ function logSubmit($logData){
     else{
         echo "<p style='color: red'>Enter all tags</p>";
     }
-    header('Refresh: 5; url=maistas.php');
+    header('Refresh: 3; url=maistas.php');
 }
 
 function regSubmit($regData){

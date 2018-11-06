@@ -3,7 +3,10 @@
     <head>
         <title>Alspok Maistas</title>
         <link rel='stylesheet' href='maistasstyle.css'>
-        <?php require_once ('class.mysqlhandler.php')
+        <?php
+            require_once('class.mysqlhandler.php');
+            require_once('maistasmain.php');
+        ?>
     </head>
     <body>
         <form action='' method=post>
@@ -15,9 +18,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php 
-                        
-                    ?>
+                    <?php viewMaistas('tbl_maistas'); ?>
                 </tbody>
                 <tfoot>
                     <tr>
