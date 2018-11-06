@@ -16,7 +16,7 @@
             <table class='table'>
                 <thead class='th'>
                     <tr>
-                        <th width='50'>Id</th><th>Nr</th><th>Prekė</th><th>Kiekis</th><th>Pastabos</th><th></th>
+                        <th>Id</th><th>Nr</th><th>Prekė</th><th>Kiekis</th><th>Pastabos</th><th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,7 +26,7 @@
                     <tr>
                         <td></td>
                         <td><input type='text' name='maistaspreke'> </td>
-                        <td><input type='text' name='maistaskiekis' size='10'></td>
+                        <td><input type='text' name='maistaskiekis'></td>
                         <td><input type='text' name='maistaspastabos'></td>
                         <td><input type='submit' name='maistas' value='Įvesti'></td>
                         <?php
@@ -57,7 +57,7 @@
             <table class='table'>
                 <thead class='th'>
                     <tr>
-                        <th width='50'>Id</th><th>Nr</th><th>Prekė</th><th>Kiekis</th><th>Pastabos</th><th></th>
+                        <th width='60'>Id</th><th>Nr</th><th>Prekė</th><th>Kiekis</th><th>Pastabos</th><th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,7 +67,7 @@
                     <tr>
                         <td></td>
                         <td><input type='text' name='kitapreke'> </td>
-                        <td><input type='text' name='kitakiekis' size='10'></td>
+                        <td><input type='text' name='kitakiekis'></td>
                         <td><input type='text' name='kitapastabos'></td>
                         <td><input type='submit' name='kita' value='Įvesti'></td>
                         <?php
