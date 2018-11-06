@@ -18,7 +18,8 @@ function logSubmit($logData){
     }
     else{
         echo "<p style='color: red'>Enter all tags</p>";
-    } 
+    }
+    
 }
 
 function regSubmit($regData){
@@ -29,7 +30,8 @@ function regSubmit($regData){
         !empty($regData['regphone'])){
             $conn = new MySqliConnection('localhost', 'root', '', 'db-alspok');
             if($conn->tableInsert('tbl_logreg', $regData)){;
-            echo '<p>Success!</p>';
+            echo "<p style='color: green;'>Success! Login with user name and password</p>";
+            header()
         }
         else{
         echo "<p style='color: red'>Enter all tags</p>";
