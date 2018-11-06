@@ -1,28 +1,17 @@
-<<<<<<< HEAD
 .table{
-    width: 50%;
+    width      : 50%;
 }
 
 .th{
-    color: rgb(92, 92, 238);
-    text-align: left;
-    font-size: 20px
+    color      : rgb(92, 92, 238);
+    text-align : left;
+    font-size  : 20px
 }
 
 .tr{
-    font-size: 18px;
-=======
-.table{
-    width: 50%;
+    font-size  : 18px;
 }
 
-.th{
-    color: rgb(92, 92, 238);
-    text-align: left;
-    font-size: 20px
-}
-
-.tr{
-    font-size: 18px;
->>>>>>> 1431887597ee621dcf64a7b8240ac3e881494127
+.tdw{
+    width      : 30px;
 }

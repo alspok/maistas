@@ -6,6 +6,6 @@ function viewMaistas($tblName){
     $table = $conn->tableView($tblName);
     $i = 1;
     while($row = $table->fetch_assoc()){
-        echo '<tr><td>' . $row['id'] . '</td><td>' . $i++ . '</td><td>' . $row['product'] . '</td><td>' . $row['quantity'] . '</td><td>' . $row['notes'] . '</td></tr>';
+        echo "<tr><td class='tdw'>" . $row['id'] . "</td><td class='tdw'>" . $i++ . '</td><td>' . $row['product'] . '</td><td>' . $row['quantity'] . '</td><td>' . $row['notes'] . '</td></tr>';
     }
 }                        
