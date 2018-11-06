@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Alspok Maistas</title>
+        <meta charset='UTF-8'>
         <link rel='stylesheet' href='maistasstyle.css'>
         <?php
             require_once('class.mysqlhandler.php');
@@ -38,7 +39,7 @@
                 </tfoot>
             </table>
             <br>
-            <input size='6' type='text' name='maistasselect'>
+            <input size='3' type='text' name='maistasselect'>
             <input type='submit' name='maistasupdate' value='Redaguoti'>
             <input type='submit' name='maistastempdelete' value='Ištrinti laikinai'>
             <input type='submit' name='maistaschange' value='Ištrinti'>
@@ -79,7 +80,7 @@
                 </tfoot>
             </table>
             <br>
-            <input size='6' type='text' name='kitachange'>
+            <input size='3' type='text' name='kitachange'>
             <input type='button' name='kitasupdate' value='Redaguoti'>
             <input type='button' name='kitastempdelete' value='Ištrinti laikinai'>
             <input type='button' name='kitasdelete' value='Ištrinti'>
