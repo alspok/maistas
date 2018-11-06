@@ -5,7 +5,7 @@
         <link rel='stylesheet' href='logreg.css'>
         <?php
             require_once 'logregmain.php';
-            require_once 'class.logreg.php';
+            require_once 'class.mysqlhandler.php';
          ?>
     </head>
     <body>

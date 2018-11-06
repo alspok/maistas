@@ -3,16 +3,10 @@
     <head>
         <title>Alspok Maistas</title>
         <link rel='stylesheet' href='maistasstyle.css'>
-        <?php
-        require_once('action.php');
-        require_once('_classLoad.php');
-        _classLoad('mysqlhandler');
-        $dbName = 'db_alspok_maistas';
-        session_start();
-        ?>
+        <?php require_once ('class.mysqlhandler.php')
     </head>
     <body>
-        <form action='index.php' method=post>
+        <form action='' method=post>
             <h2 style='color:blue'>Maistas</h2>
             <table class='table'>
                 <thead class='th'>
@@ -21,7 +15,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php loadAllTable('db_alspok_maistas', 'tbl_maistas'); ?>
+                    <?php 
+                        
+                    ?>
                 </tbody>
                 <tfoot>
                     <tr>

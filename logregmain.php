@@ -19,7 +19,7 @@ function logSubmit($logData){
     else{
         echo "<p style='color: red'>Enter all tags</p>";
     }
-    
+    header('Refresh: 5; url=maistas.php');
 }
 
 function regSubmit($regData){
@@ -31,7 +31,6 @@ function regSubmit($regData){
             $conn = new MySqliConnection('localhost', 'root', '', 'db-alspok');
             if($conn->tableInsert('tbl_logreg', $regData)){;
             echo "<p style='color: green;'>Success! Login with user name and password</p>";
-            header()
         }
         else{
         echo "<p style='color: red'>Enter all tags</p>";
