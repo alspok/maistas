@@ -9,6 +9,7 @@
         ?>
     </head>
     <body>
+    <!-- Maistas table -->
         <form action='' method=post>
             <h2 style='color:blue'>Maistas</h2>
             <table class='table'>
@@ -49,7 +50,8 @@
             ?>
         </form>
 
-        <form action='index.php' method='post'>
+        <!-- Kita table -->
+        <form action='' method='post'>
             <h2 style='color:blue'>Kita</h2>
             <table class='table'>
                 <thead class='th'>
@@ -58,7 +60,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php loadAllTable('db_alspok_maistas', 'tbl_kita'); ?>
+                <?php viewMaistas('tbl_kita'); ?>
                 </tbody>
                 <tfoot>
                     <tr>
