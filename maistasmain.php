@@ -2,7 +2,7 @@
 
 function viewMaistas($tblName){
 
-    $conn = new MySqliConnection('localhost', 'root', '', 'db-alspok');
+    $conn = new MySqliConnection('localhost', 'root', '', 'db_maistas');
     $table = $conn->tableView($tblName);
     $i = 1;
     while($row = $table->fetch_assoc()){

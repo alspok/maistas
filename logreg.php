@@ -1,7 +1,7 @@
 <!Doctype html>
 <html>
     <head>
-    <meta charset='UTF-8'>
+    <meta charset='utf8_lithuanian_ci'>
         <link rel='stylesheet' href='logreg.css'>
         <?php
             require_once 'logregmain.php';

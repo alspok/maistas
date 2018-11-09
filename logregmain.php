@@ -3,7 +3,7 @@
 function logSubmit($logData){
 
     if( !empty($logData['logname']) && !empty($logData['logpassword'])){
-        $conn = new MySqliConnection('localhost', 'root', '', 'db-alspok');
+        $conn = new MySqliConnection('localhost', 'root', '', 'db_maistas');
         $table = $conn->tableView('tbl_logreg');
         $boolen = false;
         while($row = $table->fetch_assoc()){
@@ -28,7 +28,7 @@ function regSubmit($regData){
         !empty($regData['regpassword']) &&
         !empty($regData['regemail']) &&
         !empty($regData['regphone'])){
-            $conn = new MySqliConnection('localhost', 'root', '', 'db-alspok');
+            $conn = new MySqliConnection('localhost', 'root', '', 'db_maistas');
             if($conn->tableInsert('tbl_logreg', $regData)){;
             echo "<p style='color: green;'>Success! Login with user name and password</p>";
         }
