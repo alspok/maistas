@@ -18,7 +18,7 @@
                         <th>Id</th><th>Nr</th><th>Prekė</th><th>Kiekis</th><th>Pastabos</th><th></th>
                 </thead>
                 <tr>
-                    <?php viewTable('tbl_maistas'); ?>
+                    <?php viewTableMaistas('tbl_maistas'); ?>
                 </tr>
                 <tr>
                     <td></td><td></td>
@@ -29,8 +29,9 @@
                         <td><input type='submit' name='maistas' value='Įvesti'></td>
                         <?php
                             if(isset($_POST['maistas']) && isset($_POST['maistaspreke']) && isset($_POST['maistaskiekis'])){
-                            insertTableRow('db_maistas', 'tbl_maistas');
-                            echo '<meta http-equiv="refresh" content="0">';
+                                if(insertTableRowMaistas('tbl_maistas', $_POST)){
+                                    echo '<meta http-equiv="refresh" content="0">';
+                                }
                             }
                         ?>
                     </form>
@@ -46,7 +47,7 @@
                         <td><input type='submit' name='maistaschange' value='Ištrinti'></td>
                         <?php
                         if(isset($_POST['maistasselect']) && isset($_POST['maistaschange'])){
-                            deleteTableRow('db_maistas', 'tbl_maistas');
+                            deleteTableRow('tbl_maistas');
                             echo '<meta http-equiv="refresh" content="0">';
                         }
                         ?>
@@ -63,7 +64,7 @@
                         <th>Id</th><th>Nr</th><th>Prekė</th><th>Kiekis</th><th>Pastabos</th><th></th>
                 </thead>
                 <tr>
-                    <?php viewTable('tbl_kita'); ?>
+                    <?php viewTableMaistas('tbl_kita'); ?>
                 </tr>
                 <tr>
                     <td></td><td></td>
@@ -74,7 +75,7 @@
                         <td><input type='submit' name='kita' value='Įvesti'></td>
                         <?php
                             if(isset($_POST['kita']) && isset($_POST['kitapreke']) && isset($_POST['kitakiekis'])){
-                            insertTableRow('db_kitas', 'tbl_kita');
+                            insertTableRowMaistas('tbl_kita', $_POST);
                             echo '<meta http-equiv="refresh" content="0">';
                             }
                         ?>

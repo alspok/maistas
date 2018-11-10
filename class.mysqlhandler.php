@@ -17,9 +17,13 @@ class MySqliConnection{
         $this->conn = new mysqli($this->hostName, $this->userName, $this->password, $this->dbName);
     }
 
-    public function tableView($tblName){
+    public function mySqlConn(){
 
-        $queryString = 'SELECT * FROM ' . $tblName;
+        return $this->conn;
+    }
+
+    public function tableView($tblName, $queryString){
+
         $query = $this->conn->query($queryString);
         
         return $query;
