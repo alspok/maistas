@@ -29,7 +29,7 @@
                         <td><input type='submit' name='maistas' value='Įvesti'></td>
                         <?php
                             if(isset($_POST['maistas']) && isset($_POST['maistaspreke']) && isset($_POST['maistaskiekis'])){
-                            insertTableRow('db_alspok_maistas', 'tbl_maistas');
+                            insertTableRow('db_maistas', 'tbl_maistas');
                             echo '<meta http-equiv="refresh" content="0">';
                             }
                         ?>
@@ -46,7 +46,7 @@
                         <td><input type='submit' name='maistaschange' value='Ištrinti'></td>
                         <?php
                         if(isset($_POST['maistasselect']) && isset($_POST['maistaschange'])){
-                            deleteTableRow('db_alspok_maistas', 'tbl_maistas');
+                            deleteTableRow('db_maistas', 'tbl_maistas');
                             echo '<meta http-equiv="refresh" content="0">';
                         }
                         ?>
@@ -54,7 +54,7 @@
                 </tr>
             </table>
         </div>
-        
+
         <!-- Kita table -->
         <h2>Kita</h2>
         <div class='flex-center'>
@@ -68,14 +68,13 @@
                 <tr>
                     <td></td><td></td>
                     <form action='' method='post'>
-                        <td></td>
                         <td><input type='text' name='kitapreke'> </td>
                         <td><input type='text' name='kitakiekis'></td>
                         <td><input type='text' name='kitapastabos'></td>
                         <td><input type='submit' name='kita' value='Įvesti'></td>
                         <?php
                             if(isset($_POST['kita']) && isset($_POST['kitapreke']) && isset($_POST['kitakiekis'])){
-                            insertTableRow('db_alspok_maistas', 'tbl_kita');
+                            insertTableRow('db_kitas', 'tbl_kita');
                             echo '<meta http-equiv="refresh" content="0">';
                             }
                         ?>
@@ -85,11 +84,17 @@
                 <tr>
                     <form action='' method='post'>
                         <td></td>
-                            <td><input size='3' type='text' name='kitaselect'></td>
+                        <td><input size='3' type='text' name='kitaselect'></td>
                         <td></td>
-                        <td><input type='button' name='kitasupdate' value='Redaguoti'></td>
-                        <td><input type='button' name='kitastempdelete' value='Ištrinti laikinai'></td>
-                        <td><input type='button' name='kitasdelete' value='Ištrinti'></td>
+                        <td><input type='submit' name='kitaupdate' value='Redaguoti'></td>
+                        <td><input type='submit' name='kitatempdelete' value='Ištrinti laikinai'></td>
+                        <td><input type='submit' name='kitachange' value='Ištrinti'></td>
+                        <?php
+                        if(isset($_POST['kitaselect']) && isset($_POST['kitachange'])){
+                            deleteTableRow('db_kita', 'tbl_kita');
+                            echo '<meta http-equiv="refresh" content="0">';
+                        }
+                        ?>
                     </form>
                 </tr>
             </table>
