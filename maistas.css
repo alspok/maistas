@@ -1,11 +1,19 @@
-.div-block{
-    float: center;
-    width: auto;
+body{
+    display         : flex;
+    width           : 60%;
+    height          : 100vh;
+    flex-direction  : column;
 }
 
-.table{
-    float       : right;
-    width       : auto;
+h2{
+    display         : flex;
+    justify-content : center;
+    color           : #0000ff;
+}
+
+table{
+    width           : 90%;
+    justify-content : center;
 }
 
 th{
@@ -14,6 +22,25 @@ th{
     font-size   : 20px;
     width       : 200px;
 }
+
+.flex-center{
+    display         : flex;
+    justify-content : center;
+}
+
+.flex-right{
+    display         : flex;
+    justify-content : flex-end;
+}
+
+.div-block{
+    float: center;
+    width: auto;
+}
+
+
+
+
 
 .tr{
     font-size   : 18px;
@@ -24,5 +51,5 @@ th{
 }
 
 .box{
-    border      : 0.5px;
+    border      : 0.5px solid black;
 }

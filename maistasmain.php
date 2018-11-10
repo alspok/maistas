@@ -1,6 +1,6 @@
 <?php
 
-function viewMaistas($tblName){
+function viewTable($tblName){
 
     $conn = new MySqliConnection('localhost', 'root', '', 'db_maistas');
     $table = $conn->tableView($tblName);
