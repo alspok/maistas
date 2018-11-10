@@ -1,0 +1,28 @@
+.div-block{
+    float: center;
+    width: auto;
+}
+
+.table{
+    float       : right;
+    width       : auto;
+}
+
+th{
+    color       : rgb(92, 92, 238);
+    text-align  : left;
+    font-size   : 20px;
+    width       : 200px;
+}
+
+.tr{
+    font-size   : 18px;
+}
+
+.tdw{
+    width       : 30px;
+}
+
+.box{
+    border      : 0.5px;
+}
