@@ -11,8 +11,8 @@
     </head>
     <body>
         <!-- Maistas table -->
-        <h2>Maistas</h2>
-        <div class='flex-center'>
+        <!-- <div class='flex-center'> -->
+        <h2 class='box'>Maistas</h2>
             <table class='box'>
                 <thead class='th'>
                         <th>Id</th><th>Nr</th><th>Prekė</th><th>Kiekis</th><th>Pastabos</th><th></th>
@@ -28,11 +28,8 @@
                         <td><input type='text' name='maistaspastabos'></td>
                         <td><input type='submit' name='maistas' value='Įvesti'></td>
                         <?php
-                            if(isset($_POST['maistas']) && isset($_POST['maistaspreke']) && isset($_POST['maistaskiekis'])){
-                                $boolen = insertTableRowMaistas('tbl_maistas', $_POST);
-                                if($boolen){
-                                   echo '<meta http-equiv="refresh" content="0">';
-                                }
+                            if(!empty($_POST['maistas']) && !empty($_POST['maistaspreke']) && !empty($_POST['maistaskiekis'])){
+                                if(insertTableRowMaistas('tbl_maistas', $_POST)) header('Refresh: 0');
                             }
                         ?>
                     </form>
@@ -58,8 +55,8 @@
         </div>
 
         <!-- Kita table -->
-        <h2>Kita</h2>
-        <div class='flex-center'>
+        <h2 class='box'>Kita</h2>
+        <!-- <div class='flex-center'> -->
             <table class='box'>
                 <thead class='th'>
                         <th>Id</th><th>Nr</th><th>Prekė</th><th>Kiekis</th><th>Pastabos</th><th></th>
