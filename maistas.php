@@ -29,8 +29,9 @@
                         <td><input type='submit' name='maistas' value='Įvesti'></td>
                         <?php
                             if(isset($_POST['maistas']) && isset($_POST['maistaspreke']) && isset($_POST['maistaskiekis'])){
-                                if(insertTableRowMaistas('tbl_maistas', $_POST)){
-                                    echo '<meta http-equiv="refresh" content="0">';
+                                $boolen = insertTableRowMaistas('tbl_maistas', $_POST);
+                                if($boolen){
+                                   echo '<meta http-equiv="refresh" content="0">';
                                 }
                             }
                         ?>

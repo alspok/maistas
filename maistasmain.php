@@ -16,10 +16,10 @@ function insertTableRowMaistas($tblName, $insertData ){
     $connection = new MySqliConnection('localhost', 'root', '', 'db_maistas');
     $conn = $connection->mySqlConn();
     $queryString = 'INSERT INTO ' . $tblName . ' (product, quantity, notes) VALUES (?, ?, ?)';
-    $query = $conn->prepare($queryString);
-    $query->bind_param('sss', $insertData['maistaspreke'], $insertData['maistaskiekis'], $insert['maistaspastabos']);
-    $query->execute();
-    // $query->close();
+    $stmt = $conn->prepare($queryString);
+    $stmt->bind_param('sss', $insertData['maistaspreke'], $insertData['maistaskiekis'], $insertData['maistaspastabos']);
+    if($stmt->execute()) return true;
+    $stmt->close();
 }
 
 function deleteTableRow(){
