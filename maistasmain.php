@@ -11,14 +11,15 @@ function viewTableMaistas($tblName){
     }
 }                        
 
-function insertTableRowMaistas($tblName, $insertData ){
+function insertTableRow($tblName, $insertData ){
 
     $connection = new MySqliConnection('localhost', 'root', '', 'db_maistas');
     $conn = $connection->mySqlConn();
     $queryString = 'INSERT INTO ' . $tblName . ' (product, quantity, notes) VALUES (?, ?, ?)';
     $stmt = $conn->prepare($queryString);
     $stmt->bind_param('sss', $insertData['maistaspreke'], $insertData['maistaskiekis'], $insertData['maistaspastabos']);
-    if($stmt->execute()) return true;
+    $boolen = $stmt->execute();
+    if($boolen) return true;
     $stmt->close();
 }
 

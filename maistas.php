@@ -29,7 +29,7 @@
                         <td><input type='submit' name='maistas' value='Įvesti'></td>
                         <?php
                             if(!empty($_POST['maistas']) && !empty($_POST['maistaspreke']) && !empty($_POST['maistaskiekis'])){
-                                if(insertTableRowMaistas('tbl_maistas', $_POST)) header('Refresh: 0');
+                                if(insertTableRow('tbl_maistas', $_POST)) header('Refresh: 0');
                             }
                         ?>
                     </form>
@@ -72,9 +72,8 @@
                         <td><input type='text' name='kitapastabos'></td>
                         <td><input type='submit' name='kita' value='Įvesti'></td>
                         <?php
-                            if(isset($_POST['kita']) && isset($_POST['kitapreke']) && isset($_POST['kitakiekis'])){
-                            insertTableRowMaistas('tbl_kita', $_POST);
-                            echo '<meta http-equiv="refresh" content="0">';
+                            if(!empty($_POST['kita']) && !empty($_POST['kitapreke']) && !empty($_POST['kitakiekis'])){
+                                if(insertTableRow('tbl_kita', $_POST)) header('Refresh: 0');
                             }
                         ?>
                     </form>
