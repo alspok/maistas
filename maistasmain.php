@@ -13,11 +13,16 @@ function viewTableMaistas($tblName){
 
 function insertTableRow($tblName, $insertData ){
 
+    $insertDataArray = [];
+    $i = 0;
+    foreach($insertData as $item){
+        $insertDataArray[$i++] = $item;
+    }
     $connection = new MySqliConnection('localhost', 'root', '', 'db_maistas');
     $conn = $connection->mySqlConn();
     $queryString = 'INSERT INTO ' . $tblName . ' (product, quantity, notes) VALUES (?, ?, ?)';
     $stmt = $conn->prepare($queryString);
-    $stmt->bind_param('sss', $insertData['maistaspreke'], $insertData['maistaskiekis'], $insertData['maistaspastabos']);
+    $stmt->bind_param('sss', $insertDataArray[0], $insertDataArray[1], $insertDataArray[2]);
     $boolen = $stmt->execute();
     if($boolen) return true;
     $stmt->close();

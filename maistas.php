@@ -46,7 +46,7 @@
                         <?php
                         if(isset($_POST['maistasselect']) && isset($_POST['maistaschange'])){
                             deleteTableRow('tbl_maistas');
-                            echo '<meta http-equiv="refresh" content="0">';
+                            echo "<script> location.replace('maistas.php'); </script>";
                         }
                         ?>
                     </form>
@@ -73,7 +73,9 @@
                         <td><input type='submit' name='kita' value='Įvesti'></td>
                         <?php
                             if(!empty($_POST['kita']) && !empty($_POST['kitapreke']) && !empty($_POST['kitakiekis'])){
-                                if(insertTableRow('tbl_kita', $_POST)) header('Refresh: 0');
+                                if(insertTableRow('tbl_kita', $_POST)){
+                                    echo "<script> location.replace('maistas.php'); </script>";
+                                };
                             }
                         ?>
                     </form>
