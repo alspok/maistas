@@ -45,7 +45,8 @@
                         <td><input type='submit' name='maistasdelete' value='Ištrinti'></td>
                         <?php
                         if(!empty($_POST['maistasselect']) && !empty($_POST['maistasdelete'])){
-                            deleteTableRow('tbl_maistas');
+                            $stop = 0;
+                            deleteTableRow('tbl_maistas', $_POST['maistasselect']);
                             echo "<script> location.replace('maistas.php'); </script>";
                         }
                         ?>
@@ -91,7 +92,7 @@
                         <td><input type='submit' name='kitadelete' value='Ištrinti'></td>
                         <?php
                         if(!empty($_POST['kitaselect']) && !empty($_POST['kitadelete'])){
-                            deleteTableRow('tbl_kita');
+                            deleteTableRow('tbl_kita', $_POST);
                             echo '<meta http-equiv="refresh" content="0">';
                         }
                         ?>

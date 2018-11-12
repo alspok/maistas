@@ -27,6 +27,10 @@ function insertTableRow($tblName, $insertData ){
     $stmt->close();
 }
 
-function deleteTableRow($tblName){
+function deleteTableRow($tblName, $deleteData){
 
-}
+    $conn = new MySqliConnection('localhost', 'root', '', 'db_maistas');
+    $queryString = 'SELECT * FROM ' . $tblName;
+    $table = $conn->tableView($tblName, $queryString);
+    $rowData = $table[$deleteData];
+    }
