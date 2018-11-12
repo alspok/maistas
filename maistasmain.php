@@ -1,6 +1,6 @@
 <?php
 
-function viewTableMaistas($tblName){
+function viewTable($tblName){
 
     $conn = new MySqliConnection('localhost', 'root', '', 'db_maistas');
     $queryString = 'SELECT * FROM ' . $tblName;
@@ -23,11 +23,10 @@ function insertTableRow($tblName, $insertData ){
     $queryString = 'INSERT INTO ' . $tblName . ' (product, quantity, notes) VALUES (?, ?, ?)';
     $stmt = $conn->prepare($queryString);
     $stmt->bind_param('sss', $insertDataArray[0], $insertDataArray[1], $insertDataArray[2]);
-    $boolen = $stmt->execute();
-    if($boolen) return true;
+    if($stmt->execute()) return true;
     $stmt->close();
 }
 
-function deleteTableRow(){
+function deleteTableRow($tblName){
 
 }

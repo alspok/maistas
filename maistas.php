@@ -18,7 +18,7 @@
                         <th>Id</th><th>Nr</th><th>Prekė</th><th>Kiekis</th><th>Pastabos</th><th></th>
                 </thead>
                 <tr>
-                    <?php viewTableMaistas('tbl_maistas'); ?>
+                    <?php viewTable('tbl_maistas'); ?>
                 </tr>
                 <tr>
                     <td></td><td></td>
@@ -42,9 +42,9 @@
                         <td></td>
                         <td><input type='submit' name='maistasupdate' value='Redaguoti'></td>
                         <td><input type='submit' name='maistastempdelete' value='Ištrinti laikinai'></td>
-                        <td><input type='submit' name='maistaschange' value='Ištrinti'></td>
+                        <td><input type='submit' name='maistasdelete' value='Ištrinti'></td>
                         <?php
-                        if(isset($_POST['maistasselect']) && isset($_POST['maistaschange'])){
+                        if(!empty($_POST['maistasselect']) && !empty($_POST['maistasdelete'])){
                             deleteTableRow('tbl_maistas');
                             echo "<script> location.replace('maistas.php'); </script>";
                         }
@@ -62,7 +62,7 @@
                         <th>Id</th><th>Nr</th><th>Prekė</th><th>Kiekis</th><th>Pastabos</th><th></th>
                 </thead>
                 <tr>
-                    <?php viewTableMaistas('tbl_kita'); ?>
+                    <?php viewTable('tbl_kita'); ?>
                 </tr>
                 <tr>
                     <td></td><td></td>
@@ -88,10 +88,10 @@
                         <td></td>
                         <td><input type='submit' name='kitaupdate' value='Redaguoti'></td>
                         <td><input type='submit' name='kitatempdelete' value='Ištrinti laikinai'></td>
-                        <td><input type='submit' name='kitachange' value='Ištrinti'></td>
+                        <td><input type='submit' name='kitadelete' value='Ištrinti'></td>
                         <?php
-                        if(isset($_POST['kitaselect']) && isset($_POST['kitachange'])){
-                            deleteTableRow('db_kita', 'tbl_kita');
+                        if(!empty($_POST['kitaselect']) && !empty($_POST['kitadelete'])){
+                            deleteTableRow('tbl_kita');
                             echo '<meta http-equiv="refresh" content="0">';
                         }
                         ?>
