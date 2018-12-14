@@ -1,4 +1,10 @@
 <!DOCUNENT html>
+<?php
+    if(!isset($_SESSION['logname'])) {
+    die("Please login");
+}
+?>
+
 <html>
     <head>
         <title>Alspok Maistas</title>

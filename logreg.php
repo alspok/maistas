@@ -1,4 +1,5 @@
 <!Doctype html>
+<?php session_start(); ?>
 <html>
     <head>
     <!-- <meta charset='utf8_lithuanian_ci'> -->

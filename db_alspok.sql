@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 2018 m. Lap 06 d. 14:57
+-- Generation Time: 2018 m. Lap 13 d. 18:36
 -- Server version: 5.7.23
--- PHP Version: 7.2.10
+-- PHP Version: 7.1.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db-alspok`
+-- Database: `db_alspok`
 --
 
 -- --------------------------------------------------------
@@ -48,11 +48,18 @@ CREATE TABLE IF NOT EXISTS `apklausa` (
 DROP TABLE IF EXISTS `tbl_kita`;
 CREATE TABLE IF NOT EXISTS `tbl_kita` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `product` int(255) NOT NULL,
-  `quantity` int(255) NOT NULL,
-  `notes` int(255) DEFAULT NULL,
+  `product` varchar(255) COLLATE utf8_lithuanian_ci NOT NULL,
+  `quantity` varchar(255) COLLATE utf8_lithuanian_ci NOT NULL,
+  `notes` varchar(255) COLLATE utf8_lithuanian_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_lithuanian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_lithuanian_ci;
+
+--
+-- Sukurta duomenų kopija lentelei `tbl_kita`
+--
+
+INSERT INTO `tbl_kita` (`id`, `product`, `quantity`, `notes`) VALUES
+(1, 'Pop. rankšluoščiai', '2 vnt.', 'dikelė pakuotė');
 
 -- --------------------------------------------------------
 
