@@ -1,6 +1,6 @@
 <!DOCUNENT html>
 <?php
-    if(!isset($_SESSION['logname'])) {
+    if(isset($_SESSION['logname'])) {
     die("Please login");
 }
 ?>
@@ -11,7 +11,7 @@
         <!-- <meta charset='utf8_lithuanian_ci'> -->
         <link rel='stylesheet' href='maistas.css'>
         <?php
-            require_once('class.mysqlhandler.php');
+            // require_once('class.mysqlihandler.php');
             require_once('maistasmain.php');
         ?>
     </head>
