@@ -3,8 +3,9 @@ namespace App\Helpers;
 use App\Controllers;
 ?>
 
-<h3>Maistas login arba registracija</h3>
-<h4>Login</h4>
+<h1>Maistas</h1>
+<h3>Prisijungimas ir registracija</h3>
+<h5>Prisijungimas</h5>
 <?php
 // $form = new FormHelper('POST', '/alspok/mvc/app/helpers/postinspect.php');
 $form = new FormHelper('POST', 'log');
@@ -15,7 +16,7 @@ $form->input(['name' => 'logsubmit', 'type' => 'submit', 'placeholder' => 'Login
 echo $form->get();
 ?>
 
-<h3>Registration</h3>
+<h5>Registracija</h5>
 <?php
 $form = new FormHelper('POST', 'reg');
 $form->input(['name' => 'regname', 'type' => 'text', 'placeholder' => 'Name']);
