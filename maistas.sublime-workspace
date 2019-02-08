@@ -1,0 +1,604 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"query",
+				"queryString"
+			],
+			[
+				"Data",
+				"DataCompare"
+			],
+			[
+				"D",
+				"Database"
+			],
+			[
+				"tbl",
+				"tbl_users"
+			],
+			[
+				"Db",
+				"dbInspect"
+			],
+			[
+				"us",
+				"userItem"
+			],
+			[
+				"path",
+				"pathToClass"
+			],
+			[
+				"Con",
+				"Controllers"
+			],
+			[
+				"C",
+				"Controllers"
+			],
+			[
+				"texta",
+				"textarea"
+			],
+			[
+				"strto",
+				"strtolower"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 997,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/libs/View.php",
+			"settings":
+			{
+				"buffer_size": 290,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/PostsController.php",
+			"settings":
+			{
+				"buffer_size": 3443,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/helpers/FormHelper.php",
+			"settings":
+			{
+				"buffer_size": 1599,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n\nnamespace App\\Controlers;\n\nuse App\\Libs\\Controller;\nuse App\\Helpers\\FormHelper;\n\n// include_once('libs/Controller.php');\n// include_once('helpers/FormHelper.php');\n\nclass ViewsController extends Controller\n{\n\t// $this->view->render('header');\n\t// $this->view->render('content');\n\t// $this->view->render('posts');\n\n\n\tpublic function registration()\n\t{\n\t\t$this->view->render('header');\n\t\t$this->view->render('content');\n\t\t$this->view->render('registration');\t\t\n\t\t$this->view->render('footer');\n\n\t\tvar_dump($_POST);\n\t}\n}",
+			"file": "app/controllers/ViewsController.php",
+			"file_size": 579,
+			"file_write_time": 131941109056800667,
+			"settings":
+			{
+				"buffer_size": 523,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/libs/Database.php",
+			"settings":
+			{
+				"buffer_size": 2695,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/logreg.php",
+			"settings":
+			{
+				"buffer_size": 1136,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/UsersController.php",
+			"settings":
+			{
+				"buffer_size": 125,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"x",
+				"Xdebug: Restart Session"
+			],
+			[
+				"install",
+				"Package Control: Install Local Dependency"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"Packa",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 322.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import webbrowser; webbrowser.open(\"https://www.google.com\")",
+			"?",
+			"help",
+			"cmd"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/wamp/www/alspok/maistas",
+		"/C/wamp/www/alspok/maistas/app",
+		"/C/wamp/www/alspok/maistas/app/controllers",
+		"/C/wamp/www/alspok/maistas/app/helpers",
+		"/C/wamp/www/alspok/maistas/app/libs",
+		"/C/wamp/www/alspok/maistas/app/models",
+		"/C/wamp/www/alspok/maistas/app/views"
+	],
+	"file_history":
+	[
+		"/C/wamp/www/alspok/maistas/app/views/__logreg.php",
+		"/C/wamp/www/alspok/maistas/app/models/db.php",
+		"/C/wamp/www/alspok/maistas/app/helpers/Helper.php",
+		"/C/wamp/www/alspok/maistas/_logreg.php",
+		"/C/wamp/www/alspok/maistas/logregmain.php",
+		"/C/wamp/www/alspok/laravel/lar/app/Console/Kernel.php",
+		"/C/wamp/www/alspok/laravel/lar/public/index.php",
+		"/C/wamp/www/alspok/laravel/lar/database/seeds/DatabaseSeeder.php",
+		"/C/wamp/www/alspok/mvc/index.php",
+		"/C/wamp/www/alspok/mvc/app/views/posts.php",
+		"/C/wamp/www/alspok/mvc/app/controllers/PostsController.php",
+		"/C/wamp/www/alspok/mvc/app/helpers/DataCompare.php",
+		"/C/wamp/www/alspok/mvc/app/models/db.php",
+		"/C/wamp/www/alspok/mvc/app/libs/Database.php",
+		"/C/wamp/www/alspok/mvc/app/libs/View.php",
+		"/C/wamp/www/alspok/mvc/app/controllers/ViewsController.php",
+		"/C/wamp/www/alspok/mvc/app/helpers/FormHelper.php",
+		"/C/wamp/www/alspok/mvc/mvc.sublime-project",
+		"/C/Users/Alvydas/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
+		"/C/Users/Alvydas/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/C/wamp/www/alspok/mvc/libs/Database.php",
+		"/C/wamp/www/alspok/mvc/helpers/Helper.php",
+		"/C/wamp/www/alspok/mvc/libs/Controller.php",
+		"/C/wamp/www/alspok/mvc/_index.php",
+		"/C/wamp/www/alspok/mvc/helpers/FormHelper.php",
+		"/C/wamp/www/alspok/mvc/app/controllers/ErrorsController.php",
+		"/C/wamp/www/alspok/mvc/composer.json",
+		"/C/wamp/www/alspok/mvc/controllers/PostsController.php",
+		"/C/wamp/www/alspok/mvc/controllers/ViewController.php",
+		"/C/wamp/www/alspok/oop/mvc/views/mainpage.php",
+		"/C/wamp/www/alspok/oop/mvc/views/posts.php",
+		"/C/wamp/www/alspok/oop/mvc/mvc.sublime-project",
+		"/C/Users/Alvydas/AppData/Roaming/Sublime Text 3/Packages/User/Chrome.sublime-build",
+		"/C/wamp/www/alspok/oop/mvc/views/header.html",
+		"/C/wamp/www/alspok/oop/mvc/views/content.html",
+		"/C/wamp/www/alspok/oop/mvc/views/footer.html",
+		"/C/wamp/www/alspok/oop/mvc/models/Posts.php",
+		"/C/wamp/www/alspok/oop/mvc/controllers/UsersController.php"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 108.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 997,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								841,
+								841
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/libs/View.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 290,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								149,
+								149
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/controllers/PostsController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3443,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/helpers/FormHelper.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1599,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								30,
+								30
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/ViewsController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7,
+								7
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/libs/Database.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2695,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								598,
+								598
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1620.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/logreg.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1136,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								93,
+								93
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/controllers/UsersController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 125,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								117,
+								117
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 139.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/Chrome.sublime-build",
+	"project": "maistas.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 246.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 243.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
