@@ -2,7 +2,7 @@
 
 function loadTable($tableName){
 
-    $conn = new MySqlHandler($tableName);
+    $conn = new MySqliHandler($tableName);
 
     $result = $conn->tbSelectAll();
     $i = 1;
@@ -13,7 +13,7 @@ function loadTable($tableName){
 
 function insertTableRow($tableName, $setData){
 
-    $conn = new MySqlHandler($tableName);
+    $conn = new MySqliHandler($tableName);
     var_dump($tableName);
 
     if(!empty($setData['prk']) && !empty($setData['kks'])){

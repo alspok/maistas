@@ -1,9 +1,12 @@
 <?php
 
+require_once('class.mysqlihandler.php');
+
 function loadAllTable($dbName, $tblName){
 
-    $conn = new MySqliHandler($dbName, $tblName);
-    $result = $conn->tblLoad($tblName);
+    // $conn = new MySqliHandler($hostName, $userName, $password, $dbName);
+    $conn = new MySqliHandler('localhost', 'root', '', 'db_alspok');
+    $result = $conn->tableView('tbl_maistas');
     $i = 1;
     while($row = $result->fetch_array(MYSQLI_ASSOC)){
         echo '<td>' . $row['id'] . '</td><td>' . $i++ . '</td><td>' . $row['preke'] . '</td><td>' . $row['kiekis'] . '</td><td >' . $row['pastabos'] . '</td></tr>';
