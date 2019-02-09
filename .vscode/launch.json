@@ -10,8 +10,9 @@
             "type": "php",
             "request": "launch",
             "port": 9000,
-            "localSourceRoot": "${workspaceRoot}",
-            "serverSourceRoot": "/app/public"
+            // "localSourceRoot": "${workspaceRoot}",
+            // "localSourceRoot": "c:/wamp64/www/alspok/maistas/app",
+            "pathMappings": {  "/app": "${workspaceRoot}/app" }
         },
     ]
 }
