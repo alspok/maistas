@@ -24,6 +24,42 @@ class FormHelper
     }
     
 //Selecton TAG
+    public function label($attributes)
+    {
+        $this->form .= '<label for=' . $attributes . '>' . $attributes . '</label>';
+        return $this;
+    }
+
+    public function h2($attributes)
+    {
+        $this->form .= '<h2>' . $attributes . '<h2>';
+        return $this;
+    }
+
+    public function h3($attributes)
+    {
+        $this->form .= '<h3>' . $attributes . '<h3>';
+        return $this;
+    }
+
+    public function h4($attributes)
+    {
+        $this->form .= '<h4>' . $attributes . '<h4>';
+        return $this;
+    }
+
+    public function h5($attributes)
+    {
+        $this->form .= '<h5>' . $attributes . '<h5>';
+        return $this;
+    }
+
+    public function break()
+    {
+        $this->form .= '<br>';
+        return $this;
+    }
+
     public function selection($attributes)
     {
 

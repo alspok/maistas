@@ -4,25 +4,29 @@ use App\Controllers;
 ?>
 
 <h1>Maistas</h1>
-<h3>Prisijungimas ir registracija</h3>
-<h5>Prisijungimas</h5>
+<h4>Prisijungimas</h4>
 <?php
-// $form = new FormHelper('POST', '/alspok/mvc/app/helpers/postinspect.php');
 $form = new FormHelper('POST', 'log');
-$form->input(['name' => 'logemail', 'type' => 'text', 'placeholder' => 'E.mail']);
-$form->input(['name' => 'logpass', 'type' => 'password', 'placeholder' => 'Password']);
-$form->input(['name' => 'logconfpass', 'type' => 'password', 'placeholder' => 'Conf. password']);
+$form->h5('Vardas:');
+$form->input(['name' => 'logemail', 'type' => 'text', 'placeholder' => ''])->break();
+$form->h5('Slaptažodis:');
+$form->input(['name' => 'logpass', 'type' => 'password', 'placeholder' => ''])->break()->break();
 $form->input(['name' => 'logsubmit', 'type' => 'submit', 'placeholder' => 'Login']);
+$form->break()->break();
 echo $form->get();
 ?>
 
-<h5>Registracija</h5>
+<h4>Registracija</h4>
 <?php
 $form = new FormHelper('POST', 'reg');
-$form->input(['name' => 'regname', 'type' => 'text', 'placeholder' => 'Name']);
-$form->input(['name' => 'regemail', 'type' => 'text', 'placeholder' => 'E.mail']);
-$form->input(['name' => 'regpass', 'type' => 'password', 'placeholder' => 'Password']);
-$form->input(['name' => 'regconfpass', 'type' => 'password', 'placeholder' => 'Conf. password']);
-$form->input(['name' => 'regsubmit', 'type' => 'submit', 'placeholder' => 'Register']);
+$form->h5('Vardas:');
+$form->input(['name' => 'regname', 'type' => 'text', 'placeholder' => '']);
+$form->h5('El. pašto adresas:');
+$form->input(['name' => 'regemail', 'type' => 'text', 'placeholder' => '']);
+$form->h5('Slaptažodis:');
+$form->input(['name' => 'regpass', 'type' => 'password', 'placeholder' => '']);
+$form->h5('Patvirtinti slaptažodį:');
+$form->input(['name' => 'regconfpass', 'type' => 'password', 'placeholder' => ''])->break()->break();
+$form->input(['name' => 'regsubmit', 'type' => 'submit', 'placeholder' => 'Register'])->break()->break();
 echo $form->get();
 ?>
