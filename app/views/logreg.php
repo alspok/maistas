@@ -6,7 +6,7 @@ use App\Controllers;
 <h1>Maistas</h1>
 <h4>Prisijungimas</h4>
 <?php
-$form = new FormHelper('POST', 'log');
+$form = new FormHelper('POST', 'test');
 $form->h5('Vardas:');
 $form->input(['name' => 'logemail', 'type' => 'text', 'placeholder' => ''])->break();
 $form->h5('Slaptažodis:');
@@ -18,7 +18,7 @@ echo $form->get();
 
 <h4>Registracija</h4>
 <?php
-$form = new FormHelper('POST', 'reg');
+$form = new FormHelper('POST', 'test');
 $form->h5('Vardas:');
 $form->input(['name' => 'regname', 'type' => 'text', 'placeholder' => '']);
 $form->h5('El. pašto adresas:');
