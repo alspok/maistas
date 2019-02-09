@@ -26,7 +26,9 @@ $form->input(['name' => 'regemail', 'type' => 'text', 'placeholder' => '']);
 $form->h5('Slaptažodis:');
 $form->input(['name' => 'regpass', 'type' => 'password', 'placeholder' => '']);
 $form->h5('Patvirtinti slaptažodį:');
-$form->input(['name' => 'regconfpass', 'type' => 'password', 'placeholder' => ''])->break()->break();
+$form->input(['name' => 'regconfpass', 'type' => 'password', 'placeholder' => '']);
+$form->h5('Telefonas:');
+$form->input(['name' => 'phone', 'type' => 'text', 'placeholder' => ''])->break()->break();
 $form->input(['name' => 'regsubmit', 'type' => 'submit', 'placeholder' => 'Register'])->break()->break();
 echo $form->get();
 ?>
