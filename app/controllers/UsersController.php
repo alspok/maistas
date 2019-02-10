@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 
+use App\Helpers\DataCompare;
+use App\Libs\Database;
+
 class UsersController{
 	
 	public function test()
@@ -12,17 +15,15 @@ class UsersController{
 	public function log()
 	{
 		echo 'in log';
-		$query = new Database();
-		$queryString = $query->select()->from('tbl_mvc_users');
-		$dbInspect = new DataCompare($query, $_POST);
-		$dbInspect->getDbTable();
+		$db = new Database();
+		$dbData = $db->select()->from('tbl_logreg')->getQuery()->connect()->get();
 	}
 
 	public function reg()
 	{
 		$regData = $_POST;
 		
-		$tblData = new DataCompare('tbl_mvc_users', $regData);
+		$tblData = new DataCompare('tbl_logreg', $regData);
 		$tblData->getDbTable();
 		if($tblData->dataCompare()){
 			$DB = new Database();

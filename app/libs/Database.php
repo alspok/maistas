@@ -10,7 +10,7 @@ class Database
 
     public function connect()
     {
-        $this->conn = mysqli_connect('localhost', 'root', '', 'alspok_maistas');
+        $this->conn = mysqli_connect('localhost', 'root', '', 'db_alspok_maistas');
         if(!$this->conn) echo 'Connection error';
         return $this;
     }

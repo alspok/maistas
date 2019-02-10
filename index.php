@@ -28,6 +28,8 @@ if (isset($_SERVER['PATH_INFO'])) {
        }
        else $object->index();
     }
-   else $errorObject->error('Error. Class file not found.');
+   else {
+        $errorObject->error('Error. Class file not found.');
+   }
 }
 else $errorObject->error('Error. PATH_INFO not found.');

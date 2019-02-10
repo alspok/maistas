@@ -1,12 +1,12 @@
 <?php
 namespace App\Helpers;
-use App\Controllers;
+use App\Controllers\UsersController;
 ?>
 
 <h1>Maistas</h1>
 <h4>Prisijungimas</h4>
 <?php
-$form = new FormHelper('POST', 'test');
+$form = new FormHelper('POST', '');
 $form->h5('Vardas:');
 $form->input(['name' => 'logemail', 'type' => 'text', 'placeholder' => ''])->break();
 $form->h5('Slaptažodis:');
@@ -18,7 +18,7 @@ echo $form->get();
 
 <h4>Registracija</h4>
 <?php
-$form = new FormHelper('POST', 'test');
+$form = new FormHelper('POST', '');
 $form->h5('Vardas:');
 $form->input(['name' => 'regname', 'type' => 'text', 'placeholder' => '']);
 $form->h5('El. pašto adresas:');
@@ -32,3 +32,14 @@ $form->input(['name' => 'phone', 'type' => 'text', 'placeholder' => ''])->break(
 $form->input(['name' => 'regsubmit', 'type' => 'submit', 'placeholder' => 'Register'])->break()->break();
 echo $form->get();
 ?>
+
+<?php
+if(isset($_POST['logsubmit'])){
+    $logData = new UsersController;
+    $logData->log();
+}
+
+if(isset($_POST['regsubmit'])){
+    $regData = new UsersController;
+    $regData->reg();
+}
