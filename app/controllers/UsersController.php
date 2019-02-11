@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Helpers\DataCompare;
 use App\Libs\Database;
+use App\Models\Db;
+use App\Controllers\ViewsController;
 
 class UsersController{
 	
@@ -14,9 +16,22 @@ class UsersController{
 
 	public function log()
 	{
-		echo 'in log';
-		$db = new Database();
-		$dbData = $db->select()->from('tbl_logreg')->getQuery()->connect()->get();
+		$logData = $_POST;
+
+		$query = new Database();
+		$queryString = $query->select()->from('tbl_logreg')->getQuery();
+		
+		$db = new Db($queryString);
+		$result = $db->connect()->getData();
+
+		$compare = new DataCompare($result, $logData);
+		$boolean = $compare->dataCompare();
+
+		if($boolean){
+			$dbView = new ViewsController();
+			$dbView->test();
+		}
+		else echo 'Login failed, try again.';
 	}
 
 	public function reg()

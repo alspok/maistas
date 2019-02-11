@@ -38,7 +38,7 @@ class Db
         $this->result = $this->conn->query($this->queryString);
 
 		$i = 0;
-        while($row = $this->result->fetch_array(MYSQLI_ASSOC)){
+        while($row = $this->result->fetch_array(MYSQLI_BOTH)){
 			$dbData[$i++] = $row;
 		}
         return $dbData;

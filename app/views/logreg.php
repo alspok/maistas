@@ -7,10 +7,10 @@ use App\Controllers\UsersController;
 <h4>Prisijungimas</h4>
 <?php
 $form = new FormHelper('POST', '');
-$form->h5('Vardas:');
-$form->input(['name' => 'logemail', 'type' => 'text', 'placeholder' => ''])->break();
+$form->h5('El.paštas:');
+$form->input(['name' => 'email', 'type' => 'text', 'placeholder' => ''])->break();
 $form->h5('Slaptažodis:');
-$form->input(['name' => 'logpass', 'type' => 'password', 'placeholder' => ''])->break()->break();
+$form->input(['name' => 'password', 'type' => 'password', 'placeholder' => ''])->break()->break();
 $form->input(['name' => 'logsubmit', 'type' => 'submit', 'placeholder' => 'Login']);
 $form->break()->break();
 echo $form->get();
@@ -20,13 +20,13 @@ echo $form->get();
 <?php
 $form = new FormHelper('POST', '');
 $form->h5('Vardas:');
-$form->input(['name' => 'regname', 'type' => 'text', 'placeholder' => '']);
+$form->input(['name' => 'name', 'type' => 'text', 'placeholder' => '']);
 $form->h5('El. pašto adresas:');
-$form->input(['name' => 'regemail', 'type' => 'text', 'placeholder' => '']);
+$form->input(['name' => 'email', 'type' => 'text', 'placeholder' => '']);
 $form->h5('Slaptažodis:');
-$form->input(['name' => 'regpass', 'type' => 'password', 'placeholder' => '']);
+$form->input(['name' => 'password', 'type' => 'password', 'placeholder' => '']);
 $form->h5('Patvirtinti slaptažodį:');
-$form->input(['name' => 'regconfpass', 'type' => 'password', 'placeholder' => '']);
+$form->input(['name' => 'confpassword', 'type' => 'password', 'placeholder' => '']);
 $form->h5('Telefonas:');
 $form->input(['name' => 'phone', 'type' => 'text', 'placeholder' => ''])->break()->break();
 $form->input(['name' => 'regsubmit', 'type' => 'submit', 'placeholder' => 'Register'])->break()->break();

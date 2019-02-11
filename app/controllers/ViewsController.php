@@ -1,7 +1,6 @@
 <?php
 
-// namespace App\Controlers;
-namespace App\Controlers;
+namespace App\Controllers;
 
 use App\Libs\Controller;
 use App\Helpers\FormHelper;
@@ -11,10 +10,13 @@ use App\Helpers\FormHelper;
 
 class ViewsController extends Controller
 {
-	// $this->view->render('header');
-	// $this->view->render('content');
-	// $this->view->render('posts');
-
+	public function test()
+	{
+		$this->view->render('header');
+		$this->view->render('content');
+		$this->view->render('footer');
+		echo 'in ViewsControler after login.';
+	}
 
 	public function registration()
 	{
