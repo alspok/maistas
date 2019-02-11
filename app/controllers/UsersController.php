@@ -49,10 +49,15 @@ class UsersController{
 		$boolean = $compare->regDataCompare();
 
 		if($boolean){
-
+			echo 'Alredy registered. Please login.'
 		}
 		else{
-			echo 'Already registred. Please login.';
+			$query = new Databaase();
+			$queryString = $query->insert('tbl_logreg')->column('name, password, email, phone, activity')->values($regData['name'], $regData['password'], $regData['email'], $regData['phone'], TRUE);
+
+			$db = new Db($queryString);
+			$db->connect()->putData();
+			echo 'Registration OK';
 		}
 	}
 
