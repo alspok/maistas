@@ -31,7 +31,11 @@ class UsersController{
 			$dbView = new ViewsController();
 			$dbView->test();
 		}
-		else echo 'Login failed, try again.';
+		else{
+			echo '<script language="javascript">';
+			echo 'alert("Login failed. Try again.")';
+			echo '</script>';
+		} 
 	}
 
 	public function reg()
