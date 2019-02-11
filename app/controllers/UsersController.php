@@ -25,7 +25,7 @@ class UsersController{
 		$result = $db->connect()->getData();
 
 		$compare = new DataCompare($result, $logData);
-		$boolean = $compare->dataCompare();
+		$boolean = $compare->logDataCompare();
 
 		if($boolean){
 			$dbView = new ViewsController();
@@ -37,14 +37,19 @@ class UsersController{
 	public function reg()
 	{
 		$regData = $_POST;
+
+		$query = new Database();
+		$queryString = $query->select()->from('tbl_logreg')->getQuery();
+
+		$db = new Db($queryString);
+		$result = $db->connect()->getData();
+
 		
-		$tblData = new DataCompare('tbl_logreg', $regData);
-		$tblData->getDbTable();
-		if($tblData->dataCompare()){
-			$DB = new Database();
-			$q = $DB->insert('tbl_mvc_users')->column('name, password, email, activity')->values('"' . $regData['regname'] . '","' . $regData['regpass'] . '","' . $regData['regemail'] . '","'. TRUE . '"')->getQuery();
-			$DB->connect()->putData();
-			echo 'Registration OK';
+		$compare = new DataCompare('tbl_logreg', $regData);
+		$boolean = $compare->regDataCompare();
+
+		if($boolean){
+
 		}
 		else{
 			echo 'Already registred. Please login.';
