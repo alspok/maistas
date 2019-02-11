@@ -38,11 +38,12 @@ class DataCompare
 		$this->compare = FALSE;
 
 		foreach($this->dbData as $dbItem){
-			if($dbItem['activity'] == 0 || $userData['password'] != $userData['confpassword']) continue;
+			if($dbItem['activity'] == 0) continue;
+			// || $this->userData['password'] != $this->userData['confpassword']
 			
-			if($dbItem['name'] === $userData['name'] &&
-				$dbItem['email'] === $userData['email'] &&
-				$dbItem['password'] === $userData['password']){
+			if($dbItem['name'] === $this->userData['name'] &&
+				$dbItem['email'] === $this->userData['email'] &&
+				$dbItem['password'] === $this->userData['password']){
 					$this->compare = TRUE;
 					break;
 				}
@@ -50,7 +51,8 @@ class DataCompare
 					$this->compare = FALSE;
 				}
 		}
+
+		return $this->compare;
 	}
 
-	return $this->compare;
 }

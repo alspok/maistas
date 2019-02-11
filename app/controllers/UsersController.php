@@ -49,7 +49,7 @@ class UsersController{
 		$boolean = $compare->regDataCompare();
 
 		if($boolean){
-			echo 'Alredy registered. Please login.'
+			echo 'Alredy registered. Please login.';
 		}
 		else{
 			$query = new Databaase();
