@@ -152,7 +152,7 @@ class PostsController extends Controller
 		
 		$this->view->render('header');
 		$this->view->render('content');
-		$this->view->render('logreg');
+		// $this->view->render('logreg');
 		$this->view->render('footer');
 	}
 }

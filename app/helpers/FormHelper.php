@@ -48,9 +48,21 @@ class FormHelper
         return $this;
     }
 
+    public function h4left($attributes)
+    {
+        $this->form .= '<h4 style="text-allign: left">' . $attributes . '<h4>';
+        return $this;
+    }
+
     public function h5($attributes)
     {
         $this->form .= '<h5>' . $attributes . '<h5>';
+        return $this;
+    }
+
+    public function h5left($attributes)
+    {
+        $this->form .= '<h5 style="text-allign: left">' . $attributes . '<h5>';
         return $this;
     }
 

@@ -15,3 +15,4 @@
 <div class="container">
     <div class="panel panel-default">
         <div class="panel-heading"></div>
+          <h1 style='text-align: center'>Maistas</h1>
