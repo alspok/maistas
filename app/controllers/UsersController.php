@@ -6,6 +6,7 @@ use App\Helpers\DataCompare;
 use App\Libs\Database;
 use App\Models\Db;
 use App\Controllers\ViewsController;
+use App\Helpers\TagHelper;
 
 class UsersController{
 	
@@ -32,9 +33,7 @@ class UsersController{
 			$dbView->test();
 		}
 		else{
-			echo '<script language="javascript">';
-			echo 'alert("Login failed. Try again.")';
-			echo '</script>';
+			echo '<script>alert("Login failed. Try again.")</script>';
 		} 
 	}
 

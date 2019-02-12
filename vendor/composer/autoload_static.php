@@ -24,7 +24,9 @@ class ComposerStaticInitee5fe5e78053f47170e0c2dac5c10e2e
         'App\\Controllers\\ErrorsController' => __DIR__ . '/../..' . '/app/controllers/ErrorsController.php',
         'App\\Controllers\\PostsController' => __DIR__ . '/../..' . '/app/controllers/PostsController.php',
         'App\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/controllers/UsersController.php',
-        'App\\Helper\\Helper\\Helper' => __DIR__ . '/../..' . '/app/helpers/Helper.php',
+        'App\\Controllers\\ViewsController' => __DIR__ . '/../..' . '/app/controllers/ViewsController.php',
+        'App\\Helper\\Helper' => __DIR__ . '/../..' . '/app/helpers/Helper.php',
+        'App\\Helper\\TagHelper' => __DIR__ . '/../..' . '/app/helpers/TagHelper.php',
         'App\\Helpers\\DataCompare' => __DIR__ . '/../..' . '/app/helpers/DataCompare.php',
         'App\\Helpers\\FormHelper' => __DIR__ . '/../..' . '/app/helpers/FormHelper.php',
         'App\\Helpers\\LogInspect' => __DIR__ . '/../..' . '/app/helpers/LogInspect.php',
@@ -34,7 +36,6 @@ class ComposerStaticInitee5fe5e78053f47170e0c2dac5c10e2e
         'App\\Models\\Db' => __DIR__ . '/../..' . '/app/models/db.php',
         'App\\Posts' => __DIR__ . '/../..' . '/app/models/Posts.php',
         'App\\TestController' => __DIR__ . '/../..' . '/app/controllers/TestController.php',
-        'App\\ViewsController' => __DIR__ . '/../..' . '/app/controllers/ViewsController.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
