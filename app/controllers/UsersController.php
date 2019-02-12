@@ -6,7 +6,7 @@ use App\Helpers\DataCompare;
 use App\Libs\Database;
 use App\Models\Db;
 use App\Controllers\ViewsController;
-use App\Helpers\TagHelper;
+use App\Helpers\Inspect;
 
 class UsersController{
 	
@@ -18,6 +18,11 @@ class UsersController{
 	public function log()
 	{
 		$logData = $_POST;
+
+		$emptyItem = new Inspect($logData);
+		if($emptyItem->isEmpty()){
+			exit ('<script>alert("Enter all fields.")</script>');
+		}
 
 		$query = new Database();
 		$queryString = $query->select()->from('tbl_logreg')->getQuery();
@@ -33,13 +38,18 @@ class UsersController{
 			$dbView->test();
 		}
 		else{
-			echo '<script>alert("Login failed. Try again.")</script>';
+			exit ('<script>alert("Login failed. Try again.")</script>');
 		} 
 	}
 
 	public function reg()
 	{
 		$regData = $_POST;
+
+		$emptyItem = new Inspect($regData);
+		if($emptyItem->isEmpty()){
+			exit ('<script>alert("Enter all fields.")</script>');
+		}
 
 		$query = new Database();
 		$queryString = $query->select()->from('tbl_logreg')->getQuery();
