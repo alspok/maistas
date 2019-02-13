@@ -37,7 +37,8 @@ class UsersController{
 
 		if($boolean){
 			$dbView = new ViewsController();
-			$dbView->test();
+			$food = new ViewsController;
+			$food->food();
 		}
 		else{
 			exit ('<script>alert("Login failed. Try again.")</script>');
@@ -73,6 +74,7 @@ class UsersController{
 			$db = new Db($this->queryString);
 			$db->connect()->putData();
 			echo 'Registration OK';
+			
 		}
 	}
 
