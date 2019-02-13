@@ -24,7 +24,13 @@ class ViewsController extends Controller
 		$this->view->render('content');
 		$this->view->render('registration');		
 		$this->view->render('footer');
+	}
 
-		var_dump($_POST);
+	public function food()
+	{
+		$this->view->render('header');
+		$this->view->render('content');
+		$this->view->render('footer');
+		echo 'in ViewsController - Food';
 	}
 }
