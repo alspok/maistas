@@ -20,7 +20,7 @@ echo $form->get();
 <?php
 $form = new FormHelper('POST', '');
 $form->h5('Vardas:');
-$form->input(['name' => 'name', 'type' => 'text', 'placeholder' => '']);
+$form->input(['username' => 'username', 'type' => 'text', 'placeholder' => '']);
 $form->h5('El. pašto adresas:');
 $form->input(['name' => 'email', 'type' => 'text', 'placeholder' => '']);
 $form->h5('Slaptažodis:');

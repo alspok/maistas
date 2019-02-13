@@ -10,6 +10,8 @@ use App\Helpers\Inspect;
 
 class UsersController{
 	
+	public $queryString = '';
+
 	public function test()
 	{
 		echo 'in UsersController class';
@@ -25,9 +27,9 @@ class UsersController{
 		}
 
 		$query = new Database();
-		$queryString = $query->select()->from('tbl_logreg')->getQuery();
+		$this->queryString = $query->select()->from('tbl_logreg')->getQuery();
 		
-		$db = new Db($queryString);
+		$db = new Db($this->queryString);
 		$result = $db->connect()->getData();
 
 		$compare = new DataCompare($result, $logData);
@@ -52,23 +54,23 @@ class UsersController{
 		}
 
 		$query = new Database();
-		$queryString = $query->select()->from('tbl_logreg')->getQuery();
+		$this->queryString = $query->select()->from('tbl_logreg')->getQuery();
 
-		$db = new Db($queryString);
+		$db = new Db($this->queryString);
 		$result = $db->connect()->getData();
 
 		
-		$compare = new DataCompare('tbl_logreg', $regData);
+		$compare = new DataCompare($result, $regData);
 		$boolean = $compare->regDataCompare();
 
 		if($boolean){
 			echo 'Alredy registered. Please login.';
 		}
 		else{
-			$query = new Databaase();
-			$queryString = $query->insert('tbl_logreg')->column('name, password, email, phone, activity')->values($regData['name'], $regData['password'], $regData['email'], $regData['phone'], TRUE);
+			$query = new Database();
+			$this->queryString = $query->insert('tbl_logreg')->column('name, password, email, phone, activity')->values('"' . $regData['name'] . '",' . '"' . $regData['password'] . '",' . '"' . $regData['email'] . '",' . '"' . $regData['phone'] . '",' . '"' . TRUE . '"')->getQuery();
 
-			$db = new Db($queryString);
+			$db = new Db($this->queryString);
 			$db->connect()->putData();
 			echo 'Registration OK';
 		}
