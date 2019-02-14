@@ -7,6 +7,7 @@ use App\Libs\Database;
 use App\Models\Db;
 use App\Controllers\ViewsController;
 use App\Helpers\Inspect;
+use App\Controllers\Foodcontroller;
 
 class UsersController{
 	
@@ -36,8 +37,8 @@ class UsersController{
 		$boolean = $compare->logDataCompare();
 
 		if($boolean){
-			$dbView = new ViewsController();
-			$food = new ViewsController;
+			header('Location: food');
+			$food = new FoodController;
 			$food->food();
 		}
 		else{

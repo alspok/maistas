@@ -10,9 +10,9 @@ use App\Controllers\UsersController;
             <?php
             $form = new FormHelper('POST', '');
             $form->h5('El.paštas:');
-            $form->input(['name' => 'email', 'type' => 'text', 'placeholder' => ''])->break();
+            $form->input(['name' => 'email', 'type' => 'text', 'placeholder' => '', 'value' => 'alspok@lt'])->break();
             $form->h5('Slaptažodis:');
-            $form->input(['name' => 'password', 'type' => 'password', 'placeholder' => ''])->break()->break();
+            $form->input(['name' => 'password', 'type' => 'password', 'placeholder' => '', 'value' => 'a'])->break()->break();
             $form->input(['name' => 'logsubmit', 'type' => 'submit', 'placeholder' => 'Login']);
             $form->break()->break();
             echo $form->get();
