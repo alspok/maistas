@@ -6,6 +6,7 @@ use App\Helpers\DataCompare;
 use App\Libs\Database;
 use App\Models\Db;
 use App\Controllers\ViewsController;
+use App\Controllers\FoodController;
 use App\Helpers\Inspect;
 
 class UsersController{
@@ -36,9 +37,8 @@ class UsersController{
 		$boolean = $compare->logDataCompare();
 
 		if($boolean){
-			$dbView = new ViewsController();
-			$food = new ViewsController;
-			$food->food();
+			$food = new FoodController;
+			$food->dbView();
 		}
 		else{
 			exit ('<script>alert("Login failed. Try again.")</script>');
