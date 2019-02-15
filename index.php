@@ -20,16 +20,16 @@ if (isset($_SERVER['PATH_INFO'])) {
                    $id = $path[3];
                    $object->$method($id);
                }
-               else {
-                   $object->$method();
-               }
+               else $object->$method();
            }
-           else $errorObject->error('Error. Method not found.');
+           else {
+               var_dump($object);
+               var_dump($method);
+               $errorObject->error('Error. Method ' . $method . ' not found.');
+           }
        }
        else $object->index();
     }
-   else {
-        $errorObject->error('Error. Class file not found.');
-   }
+   else $errorObject->error('Error. Class file not found.');
 }
 else $errorObject->error('Error. PATH_INFO not found.');

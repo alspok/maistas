@@ -4,9 +4,7 @@ namespace App\Controllers;
 
 use App\Libs\Controller;
 use App\Helpers\FormHelper;
-
-// include_once('libs/Controller.php');
-// include_once('helpers/FormHelper.php');
+use App\Controllers\FoodController;
 
 class ViewsController extends Controller
 {
@@ -26,10 +24,11 @@ class ViewsController extends Controller
 		$this->view->render('footer');
 	}
 
-	public function food()
+	public function foodtable()
 	{
 		$this->view->render('header');
 		$this->view->render('content');
+		$this->view->render('food');
 		$this->view->render('footer');
 		echo 'in ViewsController - Food';
 	}
