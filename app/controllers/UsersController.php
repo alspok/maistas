@@ -38,14 +38,8 @@ class UsersController{
 		$boolean = $compare->logDataCompare();
 
 		if($boolean){
-<<<<<<< HEAD
 			$food = new FoodController;
 			$food->dbView();
-=======
-			header('Location: food');
-			$food = new FoodController;
-			$food->food();
->>>>>>> e74a7c2e21c85980cbb80d1d396c3e1f96197805
 		}
 		else{
 			exit ('<script>alert("Login failed. Try again.")</script>');

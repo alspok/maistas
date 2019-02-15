@@ -1,20 +1,29 @@
 <?php
 
 namespace  App\Controllers;
-<<<<<<< HEAD
-
-=======
-use App\Controllers\FoodController;
->>>>>>> e74a7c2e21c85980cbb80d1d396c3e1f96197805
 use App\Controllers\ViewsController;
+
+use App\Libs\Database;
+use App\Helpers\FormHelper;
+use App\Helpers\DataCompare;
+use App\Libs\Controller;
+use App\Libs\Views;
+use App\Models\Db;
 
 class FoodController
 {
-<<<<<<< HEAD
     public function __construct()
     {
         echo '<br>in FoodController</br>';
     }
+
+    public function logreg()
+	{
+		$this->view->render('header');
+		$this->view->render('content');
+		// $this->view->render('logreg');
+		$this->view->render('footer');
+	}
     
     public function index()
     {
@@ -27,11 +36,4 @@ class FoodController
 	    $dbView->food();
     }
     
-=======
-    public function food()
-    {
-        $food = new ViewsController;
-        $food->foodtable();
-    }
->>>>>>> e74a7c2e21c85980cbb80d1d396c3e1f96197805
 }
