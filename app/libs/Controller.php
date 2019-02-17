@@ -4,6 +4,7 @@
 namespace App\Libs;
 
 use App\Libs\View;
+use App\Helpers\DataCompare;
 
 class Controller
 {
@@ -11,7 +12,7 @@ class Controller
 
     public function __construct()
     {
-        $this->view = new View();
+        $this->view = new View;
     }
     
 }

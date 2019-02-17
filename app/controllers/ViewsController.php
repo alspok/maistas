@@ -5,31 +5,23 @@ namespace App\Controllers;
 use App\Libs\Controller;
 use App\Helpers\FormHelper;
 use App\Controllers\FoodController;
+use App\Controllers\DataCompare;
 
 class ViewsController extends Controller
 {
-	public function test()
+	public function logReg()
 	{
 		$this->view->render('header');
 		$this->view->render('content');
 		$this->view->render('footer');
-		echo 'in ViewsControler after login.';
 	}
 
-	public function registration()
+	public function foodTable()
 	{
 		$this->view->render('header');
-		$this->view->render('content');
-		$this->view->render('registration');		
-		$this->view->render('footer');
-	}
-
-	public function foodtable()
-	{
-		$this->view->render('header');
-		$this->view->render('content');
+		// $this->view->render('content');
 		$this->view->render('food');
 		$this->view->render('footer');
-		echo 'in ViewsController - Food';
+		echo 'in ViewsController - FoodTable';
 	}
 }
