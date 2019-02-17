@@ -3,7 +3,7 @@
 // namespace App\Controllers;
 namespace App\Libs;
 
-use App\Libs\Vieww;
+use App\Libs\View;
 
 class Controller
 {

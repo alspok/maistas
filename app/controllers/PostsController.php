@@ -6,10 +6,12 @@ use App\Libs\Database;
 use App\Helpers\FormHelper;
 use App\Helpers\DataCompare;
 use App\Libs\Controller;
+use App\Libs\View;
 use App\Models\Db;
 
 class PostsController extends Controller
 {
+	public $tableName = 'tbl_maistas';
 
 	public function index()
 	{
@@ -17,22 +19,22 @@ class PostsController extends Controller
 		$this->view->render('posts');
 		
 		$DB = new Database();
-		$DB->select()->from('tbl_mvc')->connect()->getData();
+		$DB->select()->from($this->tableName)->connect()->getData();
 
 		$DB = new Database();
-		$DB->select('id, slug')->from('tbl_mvc')->where('id', '1', '=')->connect()->getData();
+		$DB->select('id, slug')->from($this->tableName)->where('id', '1', '=')->connect()->getData();
 
 		$DB = new Database();
-		$DB->insert('tbl_mvc')->column('slug, title, content')->values("'some', 'title', 'something'")->connect()->putData();
-		$DB->select()->from('tbl_mvc')->connect()->getData();
+		$DB->insert($this->tableName)->column('slug, title, content')->values("'some', 'title', 'something'")->connect()->putData();
+		$DB->select()->from($this->tableName)->connect()->getData();
 
 		$DB = new Database();
-		$DB->update('tbl_mvc')->set('slug', "'newslug'", '=')->where('id', '10', '=')->connect()->putData();
-		$DB->select()->from('tbl_mvc')->connect()->getData();
+		$DB->update($this->tableName)->set('slug', "'newslug'", '=')->where('id', '10', '=')->connect()->putData();
+		$DB->select()->from($this->tableName)->connect()->getData();
 
 		$DB = new Database();
-		$DB->delete('tbl_mvc')->where('id', '5', '=')->connect()->putData();
-		$DB->select()->from('tbl_mvc')->connect()->getData();
+		$DB->delete($this->tableName)->where('id', '5', '=')->connect()->putData();
+		$DB->select()->from($this->tableName)->connect()->getData();
 
 		$this->view->render('footer');
 	}
@@ -42,7 +44,7 @@ class PostsController extends Controller
 		$this->view->render('header');
 		$this->view->render('content');
 
-		$form = new FormHelper('POST', '/alspok/mvc/index.php/posts/add/store');
+		$form = new FormHelper('POST', '/alspok/maistas/index.php/posts/add/store');
 
 		$form->input([
 			'name' => 'name',
@@ -96,8 +98,8 @@ class PostsController extends Controller
 		var_dump($addData);
 
 		$DB = new Database();
-		$DB->insert('tbl_mvc')->column('slug, title, content')->values('"' . $addData['title'] . '","' . $addData['image'] . '","' . $addData['textarea'] . '"')->connect()->putData();
-		$DB->select()->from('tbl_mvc')->connect()->getData();
+		$DB->insert($this->tableName)->column('slug, title, content')->values('"' . $addData['title'] . '","' . $addData['image'] . '","' . $addData['textarea'] . '"')->connect()->putData();
+		$DB->select()->from($this->tableName)->connect()->getData();
 	}
 
 	public function edit()
