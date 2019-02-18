@@ -3,15 +3,13 @@
 namespace App\Controllers;
 
 use App\Libs\Database;
-use App\Helpers\FormHelper;
-use App\Helpers\DataCompare;
-use App\Libs\Controller;
 use App\Libs\View;
-use App\Models\Db;
+use App\Libs\Controller;
 
 class FoodController extends Controller
 {
 	public $tableName;
+	public $tableData;
 
 	public function __construct($tableName)
 	{
@@ -20,17 +18,12 @@ class FoodController extends Controller
 	
 	public function dbView()
 	{
+		$v = new View;
 		$db = new Database;
-		$dbData = $db->select()->from($this->tableName)->get();
-		var_dump($dbData);
-	}
-
-    public function foodTable()
-	{
-		
+		$this->tableData = $db->select()->from($this->tableName)->get();
 		$this->view->render('header');
-		$this->view->render('content');
-		$this->view->render('food');
+		var_dump($this->tableData);
 		$this->view->render('footer');
+
 	}
 }

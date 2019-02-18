@@ -1,9 +1,10 @@
 <?php
 
-// namespace App\Controllers;
 namespace App\Libs;
+// namespace App\Controllers;
 
-use App\Controllers\FoodController;
+use App\Libs\Controller;
+use App\Controllers;
 
 class View
 {

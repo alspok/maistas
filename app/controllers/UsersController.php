@@ -38,9 +38,9 @@ class UsersController{
 
 		if($boolean){
 			$food = new FoodController('tbl_maistas');
-			$food->dbView();
+			$foodData = $food->dbView();
 			$food = new FoodController('tbl_kita');
-			$food->dbView();
+			$foodData = $food->dbView();
 		}
 		else{
 			exit ('<script>alert("Login failed. Try again.")</script>');

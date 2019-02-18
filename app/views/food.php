@@ -1,26 +1,18 @@
-<html>
-    <head>
-        <style>
-            tbl-main{
-                width: 50%;
-            }
+<?php
 
-            tr{
-                width:15%;
-            }
+class FoodDB
+{
+    public $foodData;
 
-            td{
-                width: 15%;
-            }
+    public function __construct($foodData)
+    {
+        $this->foodData = $foodData;
+    }
 
-            box{
-                border: 0.5px solid red;
-            }
-        </style>
-    </head>
-    <table class='tbl-main box'>
-        <tr class='tr'>
-            <td class='td box'></td><td class='td box'>example</td><td class='td box'>example</td><td class='td box'>example</td>
-        </tr>
-    </table>
-</html>
+    public function foodView()
+    {
+        foreach($foodData as $food){
+            
+        }
+    }
+}

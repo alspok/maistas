@@ -16,10 +16,9 @@ class ViewsController extends Controller
 		$this->view->render('footer');
 	}
 
-	public function foodTable()
+	public function food()
 	{
 		$this->view->render('header');
-		// $this->view->render('content');
 		$this->view->render('food');
 		$this->view->render('footer');
 		echo 'in ViewsController - FoodTable';
