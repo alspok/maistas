@@ -1,39 +1,29 @@
-<?php
+<?php 
 
-namespace  App\Controllers;
-use App\Controllers\ViewsController;
+namespace App\Controllers;
 
 use App\Libs\Database;
-use App\Helpers\FormHelper;
-use App\Helpers\DataCompare;
+use App\Libs\View;
 use App\Libs\Controller;
-use App\Libs\Views;
-use App\Models\Db;
 
-class FoodController
+class FoodController extends Controller
 {
-    public function __construct()
-    {
-        echo '<br>in FoodController</br>';
-    }
+	public $tableName;
+	public $tableData;
 
-    public function logreg()
+	public function __construct($tableName)
 	{
-		$this->view->render('header');
-		$this->view->render('content');
-		// $this->view->render('logreg');
-		$this->view->render('footer');
+		$this->tableName = $tableName;
 	}
-    
-    public function index()
-    {
-        echo '<br>in FoodController index method</br>';
-    }
+	
+	public function dbView()
+	{
+		$v = new View;
+		$db = new Database;
+		$this->tableData = $db->select()->from($this->tableName)->get();
+		$this->view->render('header');
+		var_dump($this->tableData);
+		$this->view->render('footer');
 
-    public function dbView()
-    {
-        $dbView = new ViewsController();
-	    $dbView->food();
-    }
-    
+	}
 }

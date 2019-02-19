@@ -1,13 +1,14 @@
 <?php
 
-// namespace App\Controllers;
 namespace App\Libs;
+// namespace App\Controllers;
 
-use App\Libs\View;
+use App\Libs\Controller;
+use App\Controllers;
 
 class View
 {
-    private $viewCatalogPath = 'C:/wamp/www/alspok/maistas/app/views/';
+    private $viewCatalogPath = 'C:/wamp64/www/alspok/maistas/app/views/';
 
     public function render($templatePath)
     {

@@ -1,9 +1,10 @@
 <?php
 
-// namespace App\Controllers;
 namespace App\Libs;
 
-use App\Libs\Vieww;
+use App\Libs\View;
+use App\Helpers\DataCompare;
+use App\Controllers;
 
 class Controller
 {
@@ -11,7 +12,7 @@ class Controller
 
     public function __construct()
     {
-        $this->view = new View();
+        $this->view = new View;
     }
     
 }

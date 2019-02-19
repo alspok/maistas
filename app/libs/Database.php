@@ -8,12 +8,18 @@ class Database
     public $query = '';
     public $result;
 
-    public function connect()
+    public function __construct()
     {
         $this->conn = mysqli_connect('localhost', 'root', '', 'db_alspok_maistas');
         if(!$this->conn) echo 'Connection error';
-        return $this;
     }
+
+    // public function connect()
+    // {
+    //     $this->conn = mysqli_connect('localhost', 'root', '', 'db_alspok_maistas');
+    //     if(!$this->conn) echo 'Connection error';
+    //     return $this;
+    // }
 
     public function getQuery()
     {
