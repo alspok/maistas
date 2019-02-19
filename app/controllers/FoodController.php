@@ -18,12 +18,11 @@ class FoodController extends Controller
 	
 	public function dbView()
 	{
-		$v = new View;
+		$view = new View;
 		$db = new Database;
 		$this->tableData = $db->select()->from($this->tableName)->get();
-		$this->view->render('header');
+		$view->render('header');
 		var_dump($this->tableData);
-		$this->view->render('footer');
-
+		$view->render('footer');
 	}
 }
