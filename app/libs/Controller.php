@@ -3,8 +3,9 @@
 namespace App\Libs;
 
 use App\Libs\View;
-use App\Helpers\DataCompare;
-use App\Controllers;
+// use App\Controller\FoodController;
+// use App\Helpers\DataCompare;
+// use App\Controllers;
 
 class Controller
 {
@@ -15,4 +16,8 @@ class Controller
         $this->view = new View;
     }
     
+    public function setView()
+    {
+        return $this->view;
+    }
 }

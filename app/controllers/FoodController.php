@@ -3,14 +3,14 @@
 namespace App\Controllers;
 
 use App\Libs\Database;
-use App\Libs\View;
+// use App\Libs\View;
 use App\Libs\Controller;
 
 class FoodController extends Controller
 {
 	public $tableName;
 	public $tableData;
-
+	
 	public function __construct($tableName)
 	{
 		$this->tableName = $tableName;
@@ -18,10 +18,11 @@ class FoodController extends Controller
 	
 	public function dbView()
 	{
-		$view = new View;
+		// $view = new View;
 		$db = new Database;
 		$this->tableData = $db->select()->from($this->tableName)->get();
-		$view->render('header');
+
+		$this->view->render('header');
 		var_dump($this->tableData);
 		$view->render('footer');
 	}
