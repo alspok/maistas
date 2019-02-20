@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Libs\Controller;
 // use App\Helpers\FormHelper;
-use App\Controllers\FoodController;
+// use App\Controllers\FoodController;
 // use App\Controllers\DataCompare;
 
 class ViewsController extends Controller
@@ -14,6 +14,10 @@ class ViewsController extends Controller
 		$this->view->render('header');
 		$this->view->render('content');
 		$this->view->render('footer');
+
+		$logReg = new UsersController;
+		if(isset($_POST['logsubmit'])) $logReg->log();
+		if(isset($_POST['regsubmit'])) $logReg->reg();
 	}
 
 	public function food()
