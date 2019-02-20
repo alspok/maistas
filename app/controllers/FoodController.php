@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Libs\Database;
-// use App\Libs\View;
+use App\Libs\View;
 use App\Libs\Controller;
 
 class FoodController extends Controller

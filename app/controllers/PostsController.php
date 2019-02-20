@@ -7,7 +7,7 @@ use App\Helpers\FormHelper;
 use App\Helpers\DataCompare;
 use App\Libs\Controller;
 use App\Libs\View;
-use App\Models\Db;
+// use App\Models\Db;
 
 class PostsController extends Controller
 {
@@ -18,5 +18,7 @@ class PostsController extends Controller
 		$this->view->render('content');
 		// $this->view->render('logreg');
 		$this->view->render('footer');
+
+		
 	}
 }
